@@ -1,0 +1,85 @@
+{
+  "brandName": "Victorium Solutions",
+  "bookingUrl": "https://zbooking.eu/WWIn3",
+  "headerCta": "Rezervovať hovor",
+  "primaryCta": "Rezervovať konzultáciu",
+  "secondaryCta": "Ako prebieha spolupráca",
+  "heroBadge": "Google Business Profile pre Bratislavu",
+  "heroTitle": "Dostaňte firmu medzi top 3 výsledky na Google mapách.",
+  "heroText": "Pomáhame lokálnym firmám získať viac dopytov, hovorov a rezervácií cez Google Business Profile. Praktický plán, jasné kroky a 90-dňová garancia.",
+  "consultationTitle": "Čo získate počas úvodnej konzultácie",
+  "consultationItems": [
+    "Rýchly audit vášho profilu a porovnanie s top konkurenciou.",
+    "Identifikáciu najväčších chýb, ktoré vám berú pozície.",
+    "Konkrétny plán na nasledujúcich 90 dní."
+  ],
+  "consultationNote": "Bez nátlaku. Odídete s jasným odporúčaním, či je pre vás tento balík vhodný.",
+  "stats": [
+    {
+      "value": "75 %",
+      "label": "kliknutí",
+      "text": "na Google mapách smeruje na prvé 3 výsledky."
+    },
+    {
+      "value": "3x",
+      "label": "viac hovorov",
+      "text": "zvyknú mať firmy, ktoré sú stabilne v top pozíciách."
+    },
+    {
+      "value": "90 dní",
+      "label": "jasný cieľ",
+      "text": "ak sa nedostanete do top 3, peniaze vraciame."
+    }
+  ],
+  "processSectionTitle": "Proces, ktorý je jasný a merateľný",
+  "processSectionText": "Žiadne nejasné reporty. Každý krok má cieľ a každý cieľ má metriku.",
+  "process": [
+    {
+      "title": "Diagnostika a plán",
+      "text": "Rýchlo skontrolujeme profil, konkurenciu a lokálne SEO signály. Do 48 hodín máte konkrétny plán krokov."
+    },
+    {
+      "title": "Implementácia optimalizácie",
+      "text": "Upravíme profil, obsah a citácie tak, aby Google jasne videl vašu relevanciu pre Bratislavu."
+    },
+    {
+      "title": "Meranie a rast",
+      "text": "Sledujeme pozície, hovory a dopyty. Priebežne dolaďujeme, aby výsledky neboli jednorazové."
+    }
+  ],
+  "offerSectionTitle": "Čo je súčasťou balíka",
+  "offerSectionText": "Optimalizácia nie je len o jednom texte v profile. Pokrývame všetko, čo Google v lokálnom vyhľadávaní reálne hodnotí.",
+  "offerItems": [
+    "Kompletný audit Google Business Profile",
+    "Analýza top konkurentov v Bratislave",
+    "Nastavenie kategórií, služieb a popisov",
+    "Optimalizácia príspevkov a FAQ sekcie",
+    "Čistenie nekvalitných citácií",
+    "Budovanie relevantných lokálnych citácií"
+  ],
+  "pricingEyebrow": "Ponuka pre nové spolupráce",
+  "pricingTitle": "750 EUR jednorazovo",
+  "pricingText": "Žiadne mesačné záväzky. Jedna investícia, jasný výsledok, plná transparentnosť.",
+  "pricingItems": [
+    "90 dní na dosiahnutie top 3 pre dohodnuté kľúčové frázy.",
+    "Ak cieľ nesplníme, vraciame 100 % investície."
+  ],
+  "pricingCta": "Chcem túto ponuku",
+  "faqTitle": "Časté otázky",
+  "faq": [
+    {
+      "question": "Je to jednorazová služba alebo mesačný paušál?",
+      "answer": "Je to jednorazový balík za 750 EUR. Bez viazanosti a bez skrytých mesačných poplatkov."
+    },
+    {
+      "question": "Čo ak sa do top 3 nedostaneme?",
+      "answer": "Pri dodržaní dohodnutých podmienok máte 90-dňovú garanciu. Ak cieľ nesplníme, vraciame plnú sumu."
+    },
+    {
+      "question": "Pre koho je služba vhodná?",
+      "answer": "Pre lokálne firmy, ktoré chcú viac telefonátov a rezervácií z Google máp: servisy, kliniky, remeslá, služby."
+    }
+  ],
+  "finalTitle": "Ak chcete viac dopytov z Bratislavy, toto je najrýchlejší štart.",
+  "finalText": "Rezervujte si 30-minútovú konzultáciu. Získate jasný plán a hneď uvidíte, kde vám dnes unikajú zákazníci."
+}

@@ -1,0 +1,86 @@
+backend:
+  name: github
+  repo: seo-victorium/seo-victorium.github.io
+  branch: main
+
+local_backend: true
+
+media_folder: public/uploads
+public_folder: /uploads
+
+site_url: https://seo-victorium.github.io
+
+display_url: https://seo-victorium.github.io
+
+collections:
+  - name: landing
+    label: Landing Page
+    files:
+      - label: Landing Content
+        name: landing_content
+        file: src/content/landing-content.json
+        format: json
+        editor:
+          preview: false
+        fields:
+          - { label: Brand Name, name: brandName, widget: string }
+          - { label: Booking URL, name: bookingUrl, widget: string }
+          - { label: Header CTA, name: headerCta, widget: string }
+          - { label: Primary CTA, name: primaryCta, widget: string }
+          - { label: Secondary CTA, name: secondaryCta, widget: string }
+
+          - { label: Hero Badge, name: heroBadge, widget: string }
+          - { label: Hero Title, name: heroTitle, widget: string }
+          - { label: Hero Text, name: heroText, widget: text }
+
+          - { label: Consultation Title, name: consultationTitle, widget: string }
+          - label: Consultation Items
+            name: consultationItems
+            widget: list
+            field: { label: Item, name: item, widget: string }
+          - { label: Consultation Note, name: consultationNote, widget: text }
+
+          - label: Stats
+            name: stats
+            widget: list
+            fields:
+              - { label: Value, name: value, widget: string }
+              - { label: Label, name: label, widget: string }
+              - { label: Text, name: text, widget: text }
+
+          - { label: Process Section Title, name: processSectionTitle, widget: string }
+          - { label: Process Section Text, name: processSectionText, widget: text }
+
+          - label: Process Cards
+            name: process
+            widget: list
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Text, name: text, widget: text }
+
+          - { label: Offer Section Title, name: offerSectionTitle, widget: string }
+          - { label: Offer Section Text, name: offerSectionText, widget: text }
+          - label: Offer Items
+            name: offerItems
+            widget: list
+            field: { label: Item, name: item, widget: string }
+
+          - { label: Pricing Eyebrow, name: pricingEyebrow, widget: string }
+          - { label: Pricing Title, name: pricingTitle, widget: string }
+          - { label: Pricing Text, name: pricingText, widget: text }
+          - label: Pricing Items
+            name: pricingItems
+            widget: list
+            field: { label: Item, name: item, widget: string }
+          - { label: Pricing CTA, name: pricingCta, widget: string }
+
+          - { label: FAQ Title, name: faqTitle, widget: string }
+          - label: FAQ Items
+            name: faq
+            widget: list
+            fields:
+              - { label: Question, name: question, widget: string }
+              - { label: Answer, name: answer, widget: text }
+
+          - { label: Final Section Title, name: finalTitle, widget: string }
+          - { label: Final Section Text, name: finalText, widget: text }

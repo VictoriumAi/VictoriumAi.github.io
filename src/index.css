@@ -1,94 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --font-display: "Sora", "Avenir Next", "Segoe UI", sans-serif;
+    --font-body: "Source Sans 3", "Avenir Next", "Segoe UI", sans-serif;
+
+    --background: 45 45% 97%;
+    --foreground: 200 30% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 200 30% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 200 30% 15%;
 
-    --primary: 217 91% 60%;
+    --primary: 170 68% 32%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 44 52% 92%;
+    --secondary-foreground: 200 30% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 42 35% 92%;
+    --muted-foreground: 198 14% 40%;
 
-    --accent: 217 91% 60%;
+    --accent: 24 92% 58%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 74% 56%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 217 91% 60%;
-    
-    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(217 91% 50%) 100%);
-    --shadow-elevated: 0 10px 40px -10px hsl(217 91% 60% / 0.2);
+    --border: 35 23% 83%;
+    --input: 35 23% 83%;
+    --ring: 170 68% 32%;
 
-    --radius: 0.5rem;
+    --gradient-hero: linear-gradient(140deg, hsl(170 68% 32%) 0%, hsl(192 71% 40%) 56%, hsl(24 92% 58%) 100%);
+    --shadow-elevated: 0 24px 64px -36px hsl(170 68% 25% / 0.5);
+
+    --radius: 0.85rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 170 68% 32%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 199 30% 11%;
+    --foreground: 45 35% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 199 26% 13%;
+    --card-foreground: 45 35% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 199 26% 13%;
+    --popover-foreground: 45 35% 95%;
 
-    --primary: 217 91% 70%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 170 68% 42%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 199 20% 18%;
+    --secondary-foreground: 45 35% 95%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 199 20% 18%;
+    --muted-foreground: 205 16% 73%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 24 92% 58%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 74% 46%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 217 91% 70%;
-    
-    --gradient-hero: linear-gradient(135deg, hsl(217 91% 70%) 0%, hsl(217 91% 60%) 100%);
-    --shadow-elevated: 0 10px 40px -10px hsl(217 91% 70% / 0.3);
+    --border: 198 17% 25%;
+    --input: 198 17% 25%;
+    --ring: 170 68% 42%;
+
+    --gradient-hero: linear-gradient(140deg, hsl(170 68% 42%) 0%, hsl(192 71% 45%) 56%, hsl(24 92% 58%) 100%);
+    --shadow-elevated: 0 24px 64px -36px hsl(199 26% 5% / 0.75);
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -96,7 +91,7 @@ All colors MUST be HSL.
     --sidebar-accent: 240 3.7% 15.9%;
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 170 68% 42%;
   }
 }
 
@@ -106,6 +101,90 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+    background-image:
+      radial-gradient(circle at 14% 11%, hsl(var(--primary) / 0.12), transparent 38%),
+      radial-gradient(circle at 84% 2%, hsl(var(--accent) / 0.12), transparent 34%),
+      radial-gradient(circle at 80% 90%, hsl(192 71% 50% / 0.09), transparent 36%);
+    background-attachment: fixed;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+.hero-ambient::before,
+.hero-ambient::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  border-radius: 9999px;
+  pointer-events: none;
+  filter: blur(72px);
+}
+
+.hero-ambient::before {
+  top: -7rem;
+  left: -2rem;
+  width: 16rem;
+  height: 16rem;
+  background: hsl(var(--primary) / 0.28);
+  animation: float-orb 12s ease-in-out infinite;
+}
+
+.hero-ambient::after {
+  top: 2rem;
+  right: -5rem;
+  width: 20rem;
+  height: 20rem;
+  background: hsl(var(--accent) / 0.26);
+  animation: float-orb 14s ease-in-out infinite reverse;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: reveal-up 680ms ease-out forwards;
+}
+
+.reveal-delay-1 {
+  animation-delay: 90ms;
+}
+
+.reveal-delay-2 {
+  animation-delay: 180ms;
+}
+
+.reveal-delay-3 {
+  animation-delay: 270ms;
+}
+
+@keyframes reveal-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float-orb {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-16px) scale(1.03);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-ambient::before,
+  .hero-ambient::after {
+    filter: blur(52px);
   }
 }

@@ -1,234 +1,282 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Target, Search, FileCheck, Award } from "lucide-react";
+import {
+  ArrowRight,
+  CalendarCheck2,
+  CheckCircle2,
+  Gauge,
+  LineChart,
+  MapPin,
+  SearchCheck,
+  ShieldCheck,
+  Sparkles,
+} from "lucide-react";
+
+const stats = [
+  {
+    value: "75 %",
+    label: "kliknutí",
+    text: "na Google mapách smeruje na prvé 3 výsledky.",
+  },
+  {
+    value: "3x",
+    label: "viac hovorov",
+    text: "zvyknú mať firmy, ktoré sú stabilne v top pozíciách.",
+  },
+  {
+    value: "90 dní",
+    label: "jasný cieľ",
+    text: "ak sa nedostanete do top 3, peniaze vraciame.",
+  },
+];
+
+const process = [
+  {
+    icon: SearchCheck,
+    title: "Diagnostika a plán",
+    text: "Rýchlo skontrolujeme profil, konkurenciu a lokálne SEO signály. Do 48 hodín máte konkrétny plán krokov.",
+  },
+  {
+    icon: MapPin,
+    title: "Implementácia optimalizácie",
+    text: "Upravíme profil, obsah a citácie tak, aby Google jasne videl vašu relevanciu pre Bratislavu.",
+  },
+  {
+    icon: LineChart,
+    title: "Meranie a rast",
+    text: "Sledujeme pozície, hovory a dopyty. Priebežne dolaďujeme, aby výsledky neboli jednorazové.",
+  },
+];
+
+const offer = [
+  "Kompletný audit Google Business Profile",
+  "Analýza top konkurentov v Bratislave",
+  "Nastavenie kategórií, služieb a popisov",
+  "Optimalizácia príspevkov a FAQ sekcie",
+  "Čistenie nekvalitných citácií",
+  "Budovanie relevantných lokálnych citácií",
+];
+
+const faq = [
+  {
+    question: "Je to jednorazová služba alebo mesačný paušál?",
+    answer: "Je to jednorazový balík za 750 EUR. Bez viazanosti a bez skrytých mesačných poplatkov.",
+  },
+  {
+    question: "Čo ak sa do top 3 nedostaneme?",
+    answer:
+      "Pri dodržaní dohodnutých podmienok máte 90-dňovú garanciu. Ak cieľ nesplníme, vraciame plnú sumu.",
+  },
+  {
+    question: "Pre koho je služba vhodná?",
+    answer:
+      "Pre lokálne firmy, ktoré chcú viac telefonátov a rezervácií z Google máp: servisy, kliniky, remeslá, služby.",
+  },
+];
+
 const Index = () => {
+  const bookingUrl = "https://zbooking.eu/WWIn3";
+
   const handleBookAppointment = () => {
-    window.open("https://zbooking.eu/WWIn3", "_blank");
+    window.open(bookingUrl, "_blank", "noopener,noreferrer");
   };
-  return <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-hero py-20 px-4 sm:px-6 lg:px-8">
-        <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]" />
-        <div className="relative mx-auto max-w-7xl">
-          <div className="text-center">
-            <h1 className="mb-6 text-4xl font-bold tracking-tight text-primary-foreground sm:text-5xl lg:text-6xl">
-              Dominujte Miestne Vyhľadávanie: Dostaňte Vašu Firmu do Top 3 v Bratislave
-            </h1>
-            <p className="mx-auto mb-8 max-w-3xl text-lg text-primary-foreground/90 sm:text-xl">
-              Potrebujete sa nachádzať TOP 3 na Google, kde sa uskutočňuje 75% kliknutí. Kým vaši konkurenti zápasia s neaktuálnymi stratégiami, my sme vyvinuli systematický prístup, ktorý vám zaručí umiestnenie v TOP 3 Google vyhladávania do 90 dní. Náš balík optimalizácie GBP kombinuje konkurenčné informácie, strategické riadenie citácií a vlastné techniky, o ktorých väčšina agentúr ani nevie, že existujú. Toto je váš plán na dosiahnutie dominancie v lokálnom vyhľadávaní.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            </p>
-            <Button size="lg" onClick={handleBookAppointment} className="bg-white text-primary hover:bg-white/90 shadow-elevated text-lg px-8 py-6 h-auto">
-              Rezervovať Konzultáciu
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Statistics Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <h2 className="mb-12 text-center text-3xl font-bold text-foreground sm:text-4xl">
-            3 hlavné výhody: Prečo by sa mali stať miestne rebríčky vašou hlavnou prioritou
-          </h2>
-          <div className="grid gap-8 sm:grid-cols-3">
-            <Card className="p-8 text-center shadow-elevated hover:shadow-xl transition-shadow">
-              <div className="mb-4 text-5xl font-bold text-primary">75%</div>
-              <div className="text-lg font-semibold text-foreground mb-2">Kliknutí</div>
-              <p className="text-muted-foreground">
-                  75 % kliknutí smeruje na prvé 3 výsledky v Google Business Profile
-              </p>
-            </Card>
-            <Card className="p-8 text-center shadow-elevated hover:shadow-xl transition-shadow">
-              <div className="mb-4 text-5xl font-bold text-primary">3x</div>
-              <div className="text-lg font-semibold text-foreground mb-2">Viac Hovorov</div>
-              <p className="text-muted-foreground">
-                dostávajú firmy v prvej trojke v porovnaní s firmami na pozíciách 4–10.
-              </p>
-            </Card>
-            <Card className="p-8 text-center shadow-elevated hover:shadow-xl transition-shadow">
-              <div className="mb-4 text-5xl font-bold text-primary">90</div>
-              <div className="text-lg font-semibold text-foreground mb-2">Dní</div>
-              <p className="text-muted-foreground">
-                Náš garantovaný časový rámec na dosiahnutie výsledku alebo vrátenie peňazí      
-              </p>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Competitive Intelligence Section */}
-      <section className="bg-muted py-16 px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold text-foreground sm:text-4xl">
-              Náš systém konkurenčného spravodajstva: Viete to, čo vaši konkurenti nevedia
-            </h2>
-            <p className="mx-auto max-w-3xl text-lg text-muted-foreground">
-              Väčšina firiem optimalizuje naslepo a háda, čo by mohlo fungovať. My používame vlastnú technológiu LeadSnap na vykonávanie hlbokej konkurenčnej analýzy, ktorá odhaľuje, čo presne robia vaši najlepší konkurenti správne a, čo je ešte dôležitejšie, kde sú zraniteľní. Nie je to povrchný výskum. Analyzujeme ich profily Google Business na úrovni služieb, skúmame každú kategóriu, každý príspevok, každý vzor odpovede na recenziu a každý obsah, ktorý publikujú. Ale nezostávame len pri ich profiloch. Kontrolujeme ich webové stránky z hľadiska lokálnych SEO signálov, skúmame ich citácie v stovkách adresárov a identifikujeme nedostatky v ich stratégii, ktoré môžete využiť. Keď zistíme, že váš konkurent má dobré umiestnenie v rebríčku „havarijný servis Bratislava“, ale nie je optimalizovaný pre „24-hodinový havarijný servis v Bratislave“, je to príležitosť. Keď zistíme, že zanedbali možnosti citácií v adresároch špecializovaných odvetví, okamžite to využijeme.
-            </p>
-          </div>
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            <Card className="p-6 shadow-elevated">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                <Target className="h-6 w-6 text-primary" />
-              </div>
-              <div className="mb-2 text-xl font-semibold text-foreground">01</div>
-              <h3 className="mb-2 text-lg font-bold text-foreground">Hĺbková Analýza Profilu</h3>
-              <p className="text-muted-foreground">
-                Kompletná analýza optimalizácie GBP konkurentov, kategórií, príspevkov a vzorcov zapojenia
-              </p>
-            </Card>
-            <Card className="p-6 shadow-elevated">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                <Search className="h-6 w-6 text-primary" />
-              </div>
-              <div className="mb-2 text-xl font-semibold text-foreground">02</div>
-              <h3 className="mb-2 text-lg font-bold text-foreground">Audit Webovej Stránky</h3>
-              <p className="text-muted-foreground">
-                Technický SEO prehľad konkurenčných stránok na nájdenie miestnych faktorov hodnotenia, ktoré využívajú
-              </p>
-            </Card>
-            <Card className="p-6 shadow-elevated">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                <FileCheck className="h-6 w-6 text-primary" />
-              </div>
-              <div className="mb-2 text-xl font-semibold text-foreground">03</div>
-              <h3 className="mb-2 text-lg font-bold text-foreground">Mapovanie Citácií</h3>
-              <p className="text-muted-foreground">
-                Komplexná analýza citácií odhaľujúca strategické príležitosti
-              </p>
-            </Card>
-            <Card className="p-6 shadow-elevated">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                <Award className="h-6 w-6 text-primary" />
-              </div>
-              <div className="mb-2 text-xl font-semibold text-foreground">04</div>
-              <h3 className="mb-2 text-lg font-bold text-foreground">Identifikácia Nedostatkov</h3>
-              <p className="text-muted-foreground">
-                Strategické príležitosti, kde môžete prekonať konkurentov cez cielenú optimalizáciu
-              </p>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Citation Management Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold text-foreground sm:text-4xl">
-              Strategické Riadenie Citácií: Skrytý Faktor Hodnotenia
-            </h2>
-            <p className="mx-auto max-w-3xl text-lg text-muted-foreground">
-              Citácie sú zmienky o názve vašej firmy, adrese a telefónnom čísle na celom webe. Google ich používa na overenie legitimity vášho podnikania a určenie pozície v hodnotení. Ale tu je to, čo väčšina agentúr prehliadne: nie všetky citácie sú vytvorené rovnako a zlé citácie aktívne škodí vašim umiestneniam.
-            </p>
-          </div>
-          <div className="grid gap-8 lg:grid-cols-3">
-            <Card className="p-8 shadow-elevated">
-              <h3 className="mb-4 text-xl font-bold text-foreground">Audit Citácií</h3>
-              <p className="text-muted-foreground">
-                Identifikujeme všetky existujúce citácie, označujeme nezrovnalosti a spamové zdroje, ktoré poškodzujú vašu dôveryhodnosť.
-              </p>
-            </Card>
-            <Card className="p-8 shadow-elevated">
-              <h3 className="mb-4 text-xl font-bold text-foreground">Odstránenie Toxických Citácií  </h3>
-              <p className="text-muted-foreground">
-                Odstránenie alebo oprava citácií na nekvalitných stránkach, ktoré Google vníma ako spamové signály.
-              </p>
-            </Card>
-            <Card className="p-8 shadow-elevated">
-              <h3 className="mb-4 text-xl font-bold text-foreground">Prémiové Umiestnenie</h3>
-              <p className="text-muted-foreground">
-                Budovanie citácií na vysoko renomovaných, odvetvovo špecifických adresároch, o ktorých vaša konkurencia ani nepremýšľa.
-              </p>
-            </Card>
-          </div>
-          <div className="mt-12 rounded-lg bg-muted p-8 text-center">
-            <p className="text-lg text-foreground">
-              Naša tajná zbraň? Zostavili sme vlastnú databázu s viac ako 200 vysoko autoritatívnymi zdrojmi citácií, o ktorých existencii väčšina agentúr nevie. Nie sú to bežné adresáre, ktoré používa každý. Ide o špecializované platformy pre konkrétne odvetvia, ktoré majú v algoritme Google obrovskú váhu. Jedna citácia na správnej webovej stránke priemyselného združenia môže mať väčší vplyv ako 20 generických záznamov v adresároch. V tomto sa odlišujeme od všetkých ostatných služieb optimalizácie GBP. A tiež preto máme písomnú záruku, že vám vrátime plnú sumu, ak sa stane prakticky nemožné, že toto všetko nebude fungovať vo váš prospech. 
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Guarantee Section */}
-      <section className="bg-gradient-hero py-16 px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <div className="text-center">
-            <h2 className="mb-8 text-3xl font-bold text-primary-foreground sm:text-4xl">
-              90-dňová záruka Top 3: náš sľub pre vás
-            </h2>
-            <p className="mx-auto mb-12 max-w-3xl text-lg text-primary-foreground/90">
-              Sme si takí istí našim systémom, že sme ochotní investovať naše peniaze tam, kde sú naše slová. Za jednorazový poplatok 750€ optimalizujeme váš profil Google Business Profile pomocou našej komplexnej metodiky. Ak sa do 90 dní nedostanete do top 3 pre vaše primárne kľúčové slová v Bratislave, dostanete späť všetky peniaze. Bez otázok. Bez skrytých poplatkov. Bez mesačných nákladov, ktoré znižujú vaše zisky.
-
-Nejde o dlhodobú zmluvu, ktorej cieľom je získať od vás maximálny príjem. Ide o spoluprácu zameranú na výsledky, kde my vykonávame prácu, vy vidíte zlepšenie v rebríčku a vyťažíte z väčšej viditeľnosti a väčšieho počtu zákazníkov. Väčšina agentúr chce s vami uzavrieť 12-mesačné zmluvy, pretože si nie sú isté, či dokážu dosiahnuť rýchle výsledky. Vylepšili sme náš proces do takej miery, že 90 dní je viac než dostatočný čas na dosiahnutie umiestnenia v top 3 pre firmy, ktoré sa riadia našimi odporúčaniami.
-            </p>
-            <div className="grid gap-8 sm:grid-cols-3 mb-12">
-              <Card className="p-8 bg-white/10 backdrop-blur-sm border-white/20">
-                <h3 className="mb-2 text-2xl font-bold text-primary-foreground">750€ Jednorazový Poplatok</h3>
-                <p className="text-primary-foreground/80">
-                  Žiadne mesačné poplatky, žiadne prekvapenia, žiadne skryté náklady. Len jedna transparentná investícia.
-                </p>
-              </Card>
-              <Card className="p-8 bg-white/10 backdrop-blur-sm border-white/20">
-                <h3 className="mb-2 text-2xl font-bold text-primary-foreground">90-Dňový Časový Rámec</h3>
-                <p className="text-primary-foreground/80">
-                  Pracujeme rýchlo a strategicky. Zlepšenie pozície vo výsledkoch vyhľadávania uvidíte už za niekoľko týždňov, do 90 dní sa dostanete do prvej trojky.
-                </p>
-              </Card>
-              <Card className="p-8 bg-white/10 backdrop-blur-sm border-white/20">
-                <h3 className="mb-2 text-2xl font-bold text-primary-foreground">Záruka Vrátenia Peňazí</h3>
-                <p className="text-primary-foreground/80">
-                  Ak sa po 90 dňoch nedostanete do prvej trojky, vrátime vám 100 % vašej investície. Žiadne riziko pre vás.
-                </p>
-              </Card>
-            </div>
-            <Button size="lg" onClick={handleBookAppointment} className="bg-white text-primary hover:bg-white/90 shadow-elevated text-lg px-8 py-6 h-auto">
-              Začať Teraz - Rezervovať Konzultáciu
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl text-center">
-          <h2 className="mb-6 text-3xl font-bold text-foreground sm:text-4xl">
-            Ste pripravení ovládnuť lokálne vyhľadávanie v Bratislave?
-          </h2>
-          <p className="mb-8 text-lg text-muted-foreground">
-            V súčasnosti spolupracujeme s obmedzeným počtom firiem, aby sme zachovali kvalitu a zabezpečili výsledky. Táto ponuka v hodnote 750€ s našou 90-dňovou zárukou umiestnenia v top 3 je k dispozícii na okamžité využitie. Akonáhle budeme spolupracovať s viacerými firmami vo vašej konkrétnej kategórii a geografickej oblasti, budeme musieť pozastaviť prijímanie nových klientov, aby sme sa vyhli konfliktu záujmov.
-
-Konzultácia je jednoduchá. Preskúmame váš aktuálny profil v Google Business, identifikujeme okamžité príležitosti, vysvetlíme vám, ako vás dostaneme do top 3, a odpovieme na všetky vaše otázky týkajúce sa tohto procesu. Žiadny tlak, žiadny nátlak. Len úprimný rozhovor o tom, či je to správna voľba pre vaše obchodné ciele.
-
-Zarezervujte si strategickú konzultáciu už teraz, aby ste si zabezpečili túto ponuku a začali svoju cestu k dominancii v lokálnom vyhľadávaní. Vaši konkurenti nečakajú. Ani vy by ste nemali.
-          </p>
-          <Button size="lg" onClick={handleBookAppointment} className="shadow-elevated text-lg px-8 py-6 h-auto">
-            Rezervovať Konzultáciu Teraz
-            <ArrowRight className="ml-2 h-5 w-5" />
+  return (
+    <div className="min-h-screen bg-background text-foreground">
+      <header className="sticky top-0 z-40 border-b border-border/70 bg-background/85 backdrop-blur">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+          <a href="#top" className="flex items-center gap-2 text-sm font-semibold tracking-wide text-foreground">
+            <Sparkles className="h-4 w-4 text-primary" />
+            SEO Victorium
+          </a>
+          <Button onClick={handleBookAppointment} className="rounded-full px-5">
+            Rezervovať hovor
           </Button>
         </div>
-      </section>
-    </div>;
+      </header>
+
+      <main id="top">
+        <section className="hero-ambient relative overflow-hidden px-4 pb-20 pt-16 sm:px-6 lg:px-8">
+          <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+            <div className="reveal">
+              <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
+                <Gauge className="h-4 w-4" />
+                Google Business Profile pre Bratislavu
+              </p>
+              <h1 className="text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
+                Dostaňte firmu medzi top 3 výsledky na Google mapách.
+              </h1>
+              <p className="mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl">
+                Pomáhame lokálnym firmám získať viac dopytov, hovorov a rezervácií cez Google Business Profile.
+                Praktický plán, jasné kroky a 90-dňová garancia.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <Button
+                  size="lg"
+                  onClick={handleBookAppointment}
+                  className="h-auto rounded-full px-7 py-4 text-base shadow-elevated"
+                >
+                  Rezervovať konzultáciu
+                  <ArrowRight className="h-4 w-4" />
+                </Button>
+                <Button size="lg" variant="outline" asChild className="h-auto rounded-full px-7 py-4 text-base">
+                  <a href="#process">Ako prebieha spolupráca</a>
+                </Button>
+              </div>
+            </div>
+
+            <Card className="reveal reveal-delay-1 border-white/60 bg-white/80 p-7 shadow-elevated backdrop-blur">
+              <h2 className="text-xl font-semibold">Čo získate počas úvodnej konzultácie</h2>
+              <ul className="mt-5 space-y-4 text-sm sm:text-base">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 text-primary" />
+                  Rýchly audit vášho profilu a porovnanie s top konkurenciou.
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 text-primary" />
+                  Identifikáciu najväčších chýb, ktoré vám berú pozície.
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 text-primary" />
+                  Konkrétny plán na nasledujúcich 90 dní.
+                </li>
+              </ul>
+              <div className="mt-6 rounded-2xl bg-muted/70 p-4 text-sm text-muted-foreground">
+                Bez nátlaku. Odídete s jasným odporúčaním, či je pre vás tento balík vhodný.
+              </div>
+            </Card>
+          </div>
+        </section>
+
+        <section className="px-4 pb-20 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-6xl">
+            <div className="grid gap-4 sm:grid-cols-3">
+              {stats.map((item, index) => (
+                <Card
+                  key={item.label}
+                  className={`reveal border-white/60 bg-card/85 p-6 shadow-elevated reveal-delay-${index + 1}`}
+                >
+                  <p className="text-4xl font-semibold text-primary">{item.value}</p>
+                  <p className="mt-2 text-lg font-medium">{item.label}</p>
+                  <p className="mt-1 text-sm text-muted-foreground">{item.text}</p>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="process" className="px-4 pb-20 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-6xl">
+            <div className="mb-10 max-w-2xl">
+              <h2 className="text-3xl font-semibold sm:text-4xl">Proces, ktorý je jasný a merateľný</h2>
+              <p className="mt-4 text-lg text-muted-foreground">
+                Žiadne nejasné reporty. Každý krok má cieľ a každý cieľ má metriku.
+              </p>
+            </div>
+            <div className="grid gap-6 md:grid-cols-3">
+              {process.map((step, index) => {
+                const Icon = step.icon;
+                return (
+                  <Card
+                    key={step.title}
+                    className={`reveal border-white/60 bg-card/85 p-7 shadow-elevated reveal-delay-${index + 1}`}
+                  >
+                    <div className="mb-4 inline-flex rounded-2xl bg-primary/10 p-3 text-primary">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <h3 className="text-xl font-semibold">{step.title}</h3>
+                    <p className="mt-3 text-muted-foreground">{step.text}</p>
+                  </Card>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        <section className="px-4 pb-20 sm:px-6 lg:px-8">
+          <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-[1fr_0.95fr]">
+            <Card className="reveal border-white/60 bg-card/85 p-8 shadow-elevated">
+              <h2 className="text-3xl font-semibold sm:text-4xl">Čo je súčasťou balíka</h2>
+              <p className="mt-4 text-lg text-muted-foreground">
+                Optimalizácia nie je len o jednom texte v profile. Pokrývame všetko, čo Google v lokálnom vyhľadávaní
+                reálne hodnotí.
+              </p>
+              <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+                {offer.map((item) => (
+                  <li key={item} className="flex items-start gap-2 text-sm sm:text-base">
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </Card>
+
+            <Card className="reveal reveal-delay-1 border-primary/30 bg-gradient-hero p-8 text-primary-foreground shadow-elevated">
+              <p className="text-sm uppercase tracking-wide text-primary-foreground/80">Ponuka pre nové spolupráce</p>
+              <h3 className="mt-3 text-3xl font-semibold">750 EUR jednorazovo</h3>
+              <p className="mt-4 text-primary-foreground/90">
+                Žiadne mesačné záväzky. Jedna investícia, jasný výsledok, plná transparentnosť.
+              </p>
+              <div className="mt-6 space-y-3 text-sm sm:text-base">
+                <div className="flex items-start gap-2">
+                  <CalendarCheck2 className="mt-0.5 h-5 w-5 shrink-0" />
+                  90 dní na dosiahnutie top 3 pre dohodnuté kľúčové frázy.
+                </div>
+                <div className="flex items-start gap-2">
+                  <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0" />
+                  Ak cieľ nesplníme, vraciame 100 % investície.
+                </div>
+              </div>
+              <Button
+                size="lg"
+                onClick={handleBookAppointment}
+                className="mt-7 h-auto w-full rounded-full bg-white px-7 py-4 text-base text-primary hover:bg-white/90"
+              >
+                Chcem túto ponuku
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </Card>
+          </div>
+        </section>
+
+        <section className="px-4 pb-20 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-6xl">
+            <h2 className="text-3xl font-semibold sm:text-4xl">Časté otázky</h2>
+            <div className="mt-8 grid gap-4 md:grid-cols-3">
+              {faq.map((item, index) => (
+                <Card
+                  key={item.question}
+                  className={`reveal border-white/60 bg-card/85 p-6 shadow-elevated reveal-delay-${index + 1}`}
+                >
+                  <h3 className="text-lg font-semibold">{item.question}</h3>
+                  <p className="mt-3 text-muted-foreground">{item.answer}</p>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="px-4 pb-24 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-5xl rounded-3xl border border-border/70 bg-card/80 p-10 text-center shadow-elevated backdrop-blur">
+            <h2 className="text-3xl font-semibold sm:text-4xl">
+              Ak chcete viac dopytov z Bratislavy, toto je najrýchlejší štart.
+            </h2>
+            <p className="mx-auto mt-5 max-w-2xl text-lg text-muted-foreground">
+              Rezervujte si 30-minútovú konzultáciu. Získate jasný plán a hneď uvidíte, kde vám dnes unikajú zákazníci.
+            </p>
+            <Button
+              size="lg"
+              onClick={handleBookAppointment}
+              className="mt-8 h-auto rounded-full px-8 py-4 text-base shadow-elevated"
+            >
+              Rezervovať konzultáciu
+              <ArrowRight className="h-4 w-4" />
+            </Button>
+          </div>
+        </section>
+      </main>
+    </div>
+  );
 };
+
 export default Index;
